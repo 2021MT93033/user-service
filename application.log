@@ -1,0 +1,1011 @@
+[2022-05-02 17:22:23,833] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 13016 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 17:22:23,835] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 17:22:24,380] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 17:22:24,419] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 34 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 17:22:24,720] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 17:22:24,727] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 17:22:24,728] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 17:22:24,814] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 17:22:24,814] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 950 ms
+[2022-05-02 17:22:24,923] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 17:22:24,972] logLevel=INFO pid=13016 thread=cluster-ClusterId{value='626fc5f89de2c402eb17fa50', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:14}] to localhost:27017
+[2022-05-02 17:22:24,972] logLevel=INFO pid=13016 thread=cluster-rtt-ClusterId{value='626fc5f89de2c402eb17fa50', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:15}] to localhost:27017
+[2022-05-02 17:22:24,974] logLevel=INFO pid=13016 thread=cluster-ClusterId{value='626fc5f89de2c402eb17fa50', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15799700}
+[2022-05-02 17:22:25,521] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 17:22:25,524] logLevel=WARN pid=13016 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+[2022-05-02 17:22:25,862] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Stopping service [Tomcat]
+[2022-05-02 17:22:25,875] logLevel=INFO pid=13016 thread=main service=- trace= span= parent= class=o.s.b.a.l.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2022-05-02 17:22:25,889] logLevel=ERROR pid=13016 thread=main service=- trace= span= parent= class=o.springframework.boot.SpringApplication Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.bits.assignment.universalt10.userservice.UserServiceApplication.main(UserServiceApplication.java:10)
+Caused by: java.lang.NullPointerException: null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1515)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1750)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:392)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+[2022-05-02 17:27:28,698] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 22536 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 17:27:28,700] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 17:27:29,231] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 17:27:29,264] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 29 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 17:27:29,557] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 17:27:29,567] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 17:27:29,567] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 17:27:29,653] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 17:27:29,654] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 926 ms
+[2022-05-02 17:27:29,762] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 17:27:29,814] logLevel=INFO pid=22536 thread=cluster-rtt-ClusterId{value='626fc729353107720b688f9c', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:19}] to localhost:27017
+[2022-05-02 17:27:29,814] logLevel=INFO pid=22536 thread=cluster-ClusterId{value='626fc729353107720b688f9c', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:18}] to localhost:27017
+[2022-05-02 17:27:29,816] logLevel=INFO pid=22536 thread=cluster-ClusterId{value='626fc729353107720b688f9c', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=17119200}
+[2022-05-02 17:27:30,339] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 17:27:30,342] logLevel=WARN pid=22536 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+[2022-05-02 17:27:30,686] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Stopping service [Tomcat]
+[2022-05-02 17:27:30,697] logLevel=INFO pid=22536 thread=main service=- trace= span= parent= class=o.s.b.a.l.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2022-05-02 17:27:30,717] logLevel=ERROR pid=22536 thread=main service=- trace= span= parent= class=o.springframework.boot.SpringApplication Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.bits.assignment.universalt10.userservice.UserServiceApplication.main(UserServiceApplication.java:10)
+Caused by: java.lang.NullPointerException: null
+	at springfox.documentation.spring.web.WebMvcPatternsRequestConditionWrapper.getPatterns(WebMvcPatternsRequestConditionWrapper.java:56)
+	at springfox.documentation.RequestHandler.sortedPaths(RequestHandler.java:113)
+	at springfox.documentation.spi.service.contexts.Orderings.lambda$byPatternsCondition$3(Orderings.java:89)
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:469)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1515)
+	at java.base/java.util.ArrayList.sort(ArrayList.java:1750)
+	at java.base/java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:392)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:485)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:81)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.withDefaults(AbstractDocumentationPluginsBootstrapper.java:107)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.buildContext(AbstractDocumentationPluginsBootstrapper.java:91)
+	at springfox.documentation.spring.web.plugins.AbstractDocumentationPluginsBootstrapper.bootstrapDocumentationPlugins(AbstractDocumentationPluginsBootstrapper.java:82)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:100)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+[2022-05-02 17:42:22,004] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 23412 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 17:42:22,006] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 17:42:22,524] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 17:42:22,558] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 30 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 17:42:22,851] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 17:42:22,858] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 17:42:22,858] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 17:42:22,939] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 17:42:22,940] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 906 ms
+[2022-05-02 17:42:23,049] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 17:42:23,098] logLevel=INFO pid=23412 thread=cluster-ClusterId{value='626fcaa75ada0a27daff5a0f', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:22}] to localhost:27017
+[2022-05-02 17:42:23,098] logLevel=INFO pid=23412 thread=cluster-rtt-ClusterId{value='626fcaa75ada0a27daff5a0f', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:23}] to localhost:27017
+[2022-05-02 17:42:23,100] logLevel=INFO pid=23412 thread=cluster-ClusterId{value='626fcaa75ada0a27daff5a0f', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15590800}
+[2022-05-02 17:42:23,488] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2022-05-02 17:42:23,641] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 17:42:23,642] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed
+[2022-05-02 17:42:23,658] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2022-05-02 17:42:23,661] logLevel=WARN pid=23412 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+[2022-05-02 17:42:23,999] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Stopping service [Tomcat]
+[2022-05-02 17:42:24,011] logLevel=INFO pid=23412 thread=main service=- trace= span= parent= class=o.s.b.a.l.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2022-05-02 17:42:24,025] logLevel=ERROR pid=23412 thread=main service=- trace= span= parent= class=o.springframework.boot.SpringApplication Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.bits.assignment.universalt10.userservice.UserServiceApplication.main(UserServiceApplication.java:10)
+Caused by: java.lang.NullPointerException: null
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
+	at com.google.common.collect.ComparatorOrdering.compare(ComparatorOrdering.java:37)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1441)
+	at com.google.common.collect.Ordering.sortedCopy(Ordering.java:855)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:57)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:138)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:135)
+	at com.google.common.collect.Iterators$7.transform(Iterators.java:750)
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47)
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47)
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:52)
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:50)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:249)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:209)
+	at com.google.common.collect.FluentIterable.toList(FluentIterable.java:614)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.defaultContextBuilder(DocumentationPluginsBootstrapper.java:111)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.buildContext(DocumentationPluginsBootstrapper.java:96)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+[2022-05-02 17:52:56,420] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 20468 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 17:52:56,422] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 17:52:56,950] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 17:52:56,986] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 31 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 17:52:57,281] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 17:52:57,288] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 17:52:57,288] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 17:52:57,369] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 17:52:57,369] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 919 ms
+[2022-05-02 17:52:57,477] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 17:52:57,526] logLevel=INFO pid=20468 thread=cluster-rtt-ClusterId{value='626fcd2124b34a2db9136254', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:25}] to localhost:27017
+[2022-05-02 17:52:57,527] logLevel=INFO pid=20468 thread=cluster-ClusterId{value='626fcd2124b34a2db9136254', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:24}] to localhost:27017
+[2022-05-02 17:52:57,529] logLevel=INFO pid=20468 thread=cluster-ClusterId{value='626fcd2124b34a2db9136254', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15749000}
+[2022-05-02 17:52:57,913] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2022-05-02 17:52:58,071] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 17:52:58,072] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed
+[2022-05-02 17:52:58,089] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2022-05-02 17:52:58,092] logLevel=WARN pid=20468 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+[2022-05-02 17:52:58,416] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Stopping service [Tomcat]
+[2022-05-02 17:52:58,427] logLevel=INFO pid=20468 thread=main service=- trace= span= parent= class=o.s.b.a.l.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2022-05-02 17:52:58,441] logLevel=ERROR pid=20468 thread=main service=- trace= span= parent= class=o.springframework.boot.SpringApplication Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.bits.assignment.universalt10.userservice.UserServiceApplication.main(UserServiceApplication.java:10)
+Caused by: java.lang.NullPointerException: null
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
+	at com.google.common.collect.ComparatorOrdering.compare(ComparatorOrdering.java:37)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1441)
+	at com.google.common.collect.Ordering.sortedCopy(Ordering.java:855)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:57)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:138)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:135)
+	at com.google.common.collect.Iterators$7.transform(Iterators.java:750)
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47)
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47)
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:52)
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:50)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:249)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:209)
+	at com.google.common.collect.FluentIterable.toList(FluentIterable.java:614)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.defaultContextBuilder(DocumentationPluginsBootstrapper.java:111)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.buildContext(DocumentationPluginsBootstrapper.java:96)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+[2022-05-02 17:53:17,781] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 8536 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 17:53:17,783] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 17:53:18,320] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 17:53:18,354] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 30 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 17:53:18,661] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 17:53:18,668] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 17:53:18,669] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 17:53:18,762] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 17:53:18,762] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 951 ms
+[2022-05-02 17:53:18,874] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 17:53:18,926] logLevel=INFO pid=8536 thread=cluster-rtt-ClusterId{value='626fcd360ef53b629790d52f', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:26}] to localhost:27017
+[2022-05-02 17:53:18,926] logLevel=INFO pid=8536 thread=cluster-ClusterId{value='626fcd360ef53b629790d52f', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:27}] to localhost:27017
+[2022-05-02 17:53:18,928] logLevel=INFO pid=8536 thread=cluster-ClusterId{value='626fcd360ef53b629790d52f', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=15681800}
+[2022-05-02 17:53:19,328] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=s.d.s.w.PropertySourcedRequestMappingHandlerMapping Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+[2022-05-02 17:53:19,480] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 17:53:19,480] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=s.d.s.w.p.DocumentationPluginsBootstrapper Context refreshed
+[2022-05-02 17:53:19,497] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=s.d.s.w.p.DocumentationPluginsBootstrapper Found 1 custom documentation plugin(s)
+[2022-05-02 17:53:19,500] logLevel=WARN pid=8536 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+[2022-05-02 17:53:19,819] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Stopping service [Tomcat]
+[2022-05-02 17:53:19,829] logLevel=INFO pid=8536 thread=main service=- trace= span= parent= class=o.s.b.a.l.ConditionEvaluationReportLoggingListener 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[2022-05-02 17:53:19,844] logLevel=ERROR pid=8536 thread=main service=- trace= span= parent= class=o.springframework.boot.SpringApplication Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.bits.assignment.universalt10.userservice.UserServiceApplication.main(UserServiceApplication.java:10)
+Caused by: java.lang.NullPointerException: null
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112)
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109)
+	at com.google.common.collect.ComparatorOrdering.compare(ComparatorOrdering.java:37)
+	at java.base/java.util.TimSort.countRunAndMakeAscending(TimSort.java:355)
+	at java.base/java.util.TimSort.sort(TimSort.java:220)
+	at java.base/java.util.Arrays.sort(Arrays.java:1441)
+	at com.google.common.collect.Ordering.sortedCopy(Ordering.java:855)
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:57)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:138)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:135)
+	at com.google.common.collect.Iterators$7.transform(Iterators.java:750)
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47)
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47)
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:52)
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:50)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:249)
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:209)
+	at com.google.common.collect.FluentIterable.toList(FluentIterable.java:614)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.defaultContextBuilder(DocumentationPluginsBootstrapper.java:111)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.buildContext(DocumentationPluginsBootstrapper.java:96)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178)
+	... 14 common frames omitted
+[2022-05-02 18:03:35,145] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 23740 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 18:03:35,148] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 18:03:35,659] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 18:03:35,729] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 62 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 18:03:36,079] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 18:03:36,087] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 18:03:36,087] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 18:03:36,169] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 18:03:36,170] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 990 ms
+[2022-05-02 18:03:36,270] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 18:03:36,319] logLevel=INFO pid=23740 thread=cluster-rtt-ClusterId{value='626fcfa0b71e8811387c715d', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:29}] to localhost:27017
+[2022-05-02 18:03:36,319] logLevel=INFO pid=23740 thread=cluster-ClusterId{value='626fcfa0b71e8811387c715d', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:28}] to localhost:27017
+[2022-05-02 18:03:36,321] logLevel=INFO pid=23740 thread=cluster-ClusterId{value='626fcfa0b71e8811387c715d', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14890800}
+[2022-05-02 18:03:36,965] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 18:03:36,972] logLevel=INFO pid=23740 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Started UserServiceApplication in 2.171 seconds (JVM running for 3.012)
+[2022-05-02 18:12:24,463] logLevel=INFO pid=23740 thread=RMI TCP Connection(18)-127.0.0.1 service=- trace= span= parent= class=o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Application shutdown requested.
+[2022-05-02 18:18:30,815] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 4548 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 18:18:30,817] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 18:18:31,227] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 18:18:31,262] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 30 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 18:18:31,551] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 18:18:31,558] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 18:18:31,558] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 18:18:31,642] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 18:18:31,643] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 799 ms
+[2022-05-02 18:18:31,743] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 18:18:31,791] logLevel=INFO pid=4548 thread=cluster-rtt-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:32}] to localhost:27017
+[2022-05-02 18:18:31,791] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:31}] to localhost:27017
+[2022-05-02 18:18:31,793] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=14557100}
+[2022-05-02 18:18:32,432] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 18:18:32,438] logLevel=INFO pid=4548 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Started UserServiceApplication in 1.944 seconds (JVM running for 2.808)
+[2022-05-02 18:18:59,771] logLevel=INFO pid=4548 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-05-02 18:18:59,771] logLevel=INFO pid=4548 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2022-05-02 18:18:59,772] logLevel=INFO pid=4548 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Completed initialization in 1 ms
+[2022-05-02 18:20:24,841] logLevel=INFO pid=4548 thread=http-nio-9002-exec-10 service=- trace= span= parent= class=o.springdoc.api.AbstractOpenApiResource Init duration for springdoc-openapi is: 193 ms
+[2022-05-02 18:21:32,903] logLevel=ERROR pid=4548 thread=http-nio-9002-exec-4 service=- trace= span= parent= class=o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [/user-service] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='admin', source='userDB', password=<hidden>, mechanismProperties=<hidden>}; nested exception is com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='admin', source='userDB', password=<hidden>, mechanismProperties=<hidden>}] with root cause
+com.mongodb.MongoCommandException: Command failed with error 18 (AuthenticationFailed): 'Authentication failed.' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "Authentication failed.", "code": 18, "codeName": "AuthenticationFailed"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:198)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:418)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:342)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:96)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:44)
+	at com.mongodb.internal.connection.SaslAuthenticator.sendSaslContinue(SaslAuthenticator.java:232)
+	at com.mongodb.internal.connection.SaslAuthenticator.access$200(SaslAuthenticator.java:48)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:75)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:57)
+	at com.mongodb.internal.connection.SaslAuthenticator.doAsSubject(SaslAuthenticator.java:280)
+	at com.mongodb.internal.connection.SaslAuthenticator.authenticate(SaslAuthenticator.java:57)
+	at com.mongodb.internal.connection.DefaultAuthenticator.authenticate(DefaultAuthenticator.java:55)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.authenticate(InternalStreamConnectionInitializer.java:207)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.finishHandshake(InternalStreamConnectionInitializer.java:81)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:185)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.open(UsageTrackingInternalConnection.java:54)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.open(DefaultConnectionPool.java:538)
+	at com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openWithConcurrencyLimit(DefaultConnectionPool.java:914)
+	at com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openOrGetAvailable(DefaultConnectionPool.java:855)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:173)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:162)
+	at com.mongodb.internal.connection.DefaultServer.getConnection(DefaultServer.java:101)
+	at com.mongodb.internal.binding.ClusterBinding$ClusterBindingConnectionSource.getConnection(ClusterBinding.java:175)
+	at com.mongodb.client.internal.ClientSessionBinding$SessionBindingConnectionSource.getConnection(ClientSessionBinding.java:188)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:581)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$3(OperationHelper.java:563)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:589)
+	at com.mongodb.internal.operation.OperationHelper.withSourceAndConnection(OperationHelper.java:562)
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$2(FindOperation.java:661)
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:65)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:692)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:86)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:191)
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:135)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:92)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2853)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2581)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2563)
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:868)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:444)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:639)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy69.findAll(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy69.findAll(Unknown Source)
+	at com.bits.assignment.universalt10.userservice.service.UserDetailServiceImpl.getAllUsers(UserDetailServiceImpl.java:35)
+	at com.bits.assignment.universalt10.userservice.controller.UserDetailController.getAllUserDetails(UserDetailController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+[2022-05-02 18:21:42,903] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:4, serverValue:34}] to localhost:27017
+[2022-05-02 18:21:42,904] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1724800}
+[2022-05-02 18:24:22,170] logLevel=ERROR pid=4548 thread=http-nio-9002-exec-5 service=- trace= span= parent= class=o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [/user-service] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='admin', source='userDB', password=<hidden>, mechanismProperties=<hidden>}; nested exception is com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='admin', source='userDB', password=<hidden>, mechanismProperties=<hidden>}] with root cause
+com.mongodb.MongoCommandException: Command failed with error 18 (AuthenticationFailed): 'Authentication failed.' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "Authentication failed.", "code": 18, "codeName": "AuthenticationFailed"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:198)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:418)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:342)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:96)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:44)
+	at com.mongodb.internal.connection.SaslAuthenticator.sendSaslContinue(SaslAuthenticator.java:232)
+	at com.mongodb.internal.connection.SaslAuthenticator.access$200(SaslAuthenticator.java:48)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:75)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:57)
+	at com.mongodb.internal.connection.SaslAuthenticator.doAsSubject(SaslAuthenticator.java:280)
+	at com.mongodb.internal.connection.SaslAuthenticator.authenticate(SaslAuthenticator.java:57)
+	at com.mongodb.internal.connection.DefaultAuthenticator.authenticate(DefaultAuthenticator.java:55)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.authenticate(InternalStreamConnectionInitializer.java:207)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.finishHandshake(InternalStreamConnectionInitializer.java:81)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:185)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.open(UsageTrackingInternalConnection.java:54)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.open(DefaultConnectionPool.java:538)
+	at com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openWithConcurrencyLimit(DefaultConnectionPool.java:914)
+	at com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openOrGetAvailable(DefaultConnectionPool.java:855)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:173)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:162)
+	at com.mongodb.internal.connection.DefaultServer.getConnection(DefaultServer.java:101)
+	at com.mongodb.internal.binding.ClusterBinding$ClusterBindingConnectionSource.getConnection(ClusterBinding.java:175)
+	at com.mongodb.client.internal.ClientSessionBinding$SessionBindingConnectionSource.getConnection(ClientSessionBinding.java:188)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:581)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$3(OperationHelper.java:563)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:589)
+	at com.mongodb.internal.operation.OperationHelper.withSourceAndConnection(OperationHelper.java:562)
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$2(FindOperation.java:661)
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:65)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:692)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:86)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:191)
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:135)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:92)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2853)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2581)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2563)
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:868)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:444)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:639)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy69.findAll(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy69.findAll(Unknown Source)
+	at com.bits.assignment.universalt10.userservice.service.UserDetailServiceImpl.getAllUsers(UserDetailServiceImpl.java:35)
+	at com.bits.assignment.universalt10.userservice.controller.UserDetailController.getAllUserDetails(UserDetailController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+[2022-05-02 18:24:30,053] logLevel=INFO pid=4548 thread=http-nio-9002-exec-7 service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster description not yet available. Waiting for 30000 ms before timing out
+[2022-05-02 18:24:30,055] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:6, serverValue:36}] to localhost:27017
+[2022-05-02 18:24:30,055] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=782400}
+[2022-05-02 18:24:30,100] logLevel=ERROR pid=4548 thread=http-nio-9002-exec-7 service=- trace= span= parent= class=o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [/user-service] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='admin', source='userDB', password=<hidden>, mechanismProperties=<hidden>}; nested exception is com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='admin', source='userDB', password=<hidden>, mechanismProperties=<hidden>}] with root cause
+com.mongodb.MongoCommandException: Command failed with error 18 (AuthenticationFailed): 'Authentication failed.' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "Authentication failed.", "code": 18, "codeName": "AuthenticationFailed"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:198)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:418)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:342)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:96)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:44)
+	at com.mongodb.internal.connection.SaslAuthenticator.sendSaslContinue(SaslAuthenticator.java:232)
+	at com.mongodb.internal.connection.SaslAuthenticator.access$200(SaslAuthenticator.java:48)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:75)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:57)
+	at com.mongodb.internal.connection.SaslAuthenticator.doAsSubject(SaslAuthenticator.java:280)
+	at com.mongodb.internal.connection.SaslAuthenticator.authenticate(SaslAuthenticator.java:57)
+	at com.mongodb.internal.connection.DefaultAuthenticator.authenticate(DefaultAuthenticator.java:55)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.authenticate(InternalStreamConnectionInitializer.java:207)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.finishHandshake(InternalStreamConnectionInitializer.java:81)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:185)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.open(UsageTrackingInternalConnection.java:54)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.open(DefaultConnectionPool.java:538)
+	at com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openWithConcurrencyLimit(DefaultConnectionPool.java:914)
+	at com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openOrGetAvailable(DefaultConnectionPool.java:855)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:173)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:162)
+	at com.mongodb.internal.connection.DefaultServer.getConnection(DefaultServer.java:101)
+	at com.mongodb.internal.binding.ClusterBinding$ClusterBindingConnectionSource.getConnection(ClusterBinding.java:175)
+	at com.mongodb.client.internal.ClientSessionBinding$SessionBindingConnectionSource.getConnection(ClientSessionBinding.java:188)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:581)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$3(OperationHelper.java:563)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:589)
+	at com.mongodb.internal.operation.OperationHelper.withSourceAndConnection(OperationHelper.java:562)
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$2(FindOperation.java:661)
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:65)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:692)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:86)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:191)
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:135)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:92)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2853)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2581)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2563)
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:868)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:444)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:639)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy69.findAll(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy69.findAll(Unknown Source)
+	at com.bits.assignment.universalt10.userservice.service.UserDetailServiceImpl.getAllUsers(UserDetailServiceImpl.java:35)
+	at com.bits.assignment.universalt10.userservice.controller.UserDetailController.getAllUserDetails(UserDetailController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+[2022-05-02 18:24:40,114] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:8, serverValue:38}] to localhost:27017
+[2022-05-02 18:24:40,115] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=876000}
+[2022-05-02 18:27:40,100] logLevel=ERROR pid=4548 thread=http-nio-9002-exec-6 service=- trace= span= parent= class=o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [/user-service] threw exception [Request processing failed; nested exception is org.springframework.data.mongodb.UncategorizedMongoDbException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='admin', source='userDB', password=<hidden>, mechanismProperties=<hidden>}; nested exception is com.mongodb.MongoSecurityException: Exception authenticating MongoCredential{mechanism=SCRAM-SHA-256, userName='admin', source='userDB', password=<hidden>, mechanismProperties=<hidden>}] with root cause
+com.mongodb.MongoCommandException: Command failed with error 18 (AuthenticationFailed): 'Authentication failed.' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "Authentication failed.", "code": 18, "codeName": "AuthenticationFailed"}
+	at com.mongodb.internal.connection.ProtocolHelper.getCommandFailureException(ProtocolHelper.java:198)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:418)
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:342)
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:96)
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:44)
+	at com.mongodb.internal.connection.SaslAuthenticator.sendSaslContinue(SaslAuthenticator.java:232)
+	at com.mongodb.internal.connection.SaslAuthenticator.access$200(SaslAuthenticator.java:48)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:75)
+	at com.mongodb.internal.connection.SaslAuthenticator$1.run(SaslAuthenticator.java:57)
+	at com.mongodb.internal.connection.SaslAuthenticator.doAsSubject(SaslAuthenticator.java:280)
+	at com.mongodb.internal.connection.SaslAuthenticator.authenticate(SaslAuthenticator.java:57)
+	at com.mongodb.internal.connection.DefaultAuthenticator.authenticate(DefaultAuthenticator.java:55)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.authenticate(InternalStreamConnectionInitializer.java:207)
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.finishHandshake(InternalStreamConnectionInitializer.java:81)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:185)
+	at com.mongodb.internal.connection.UsageTrackingInternalConnection.open(UsageTrackingInternalConnection.java:54)
+	at com.mongodb.internal.connection.DefaultConnectionPool$PooledConnection.open(DefaultConnectionPool.java:538)
+	at com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openWithConcurrencyLimit(DefaultConnectionPool.java:914)
+	at com.mongodb.internal.connection.DefaultConnectionPool$OpenConcurrencyLimiter.openOrGetAvailable(DefaultConnectionPool.java:855)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:173)
+	at com.mongodb.internal.connection.DefaultConnectionPool.get(DefaultConnectionPool.java:162)
+	at com.mongodb.internal.connection.DefaultServer.getConnection(DefaultServer.java:101)
+	at com.mongodb.internal.binding.ClusterBinding$ClusterBindingConnectionSource.getConnection(ClusterBinding.java:175)
+	at com.mongodb.client.internal.ClientSessionBinding$SessionBindingConnectionSource.getConnection(ClientSessionBinding.java:188)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:581)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$3(OperationHelper.java:563)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:589)
+	at com.mongodb.internal.operation.OperationHelper.withSourceAndConnection(OperationHelper.java:562)
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$2(FindOperation.java:661)
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:65)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:692)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:86)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:191)
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:135)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:92)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2853)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2581)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2563)
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:868)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:444)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:154)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:289)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:137)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:121)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:529)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:639)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:163)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:80)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy69.findAll(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
+	at com.sun.proxy.$Proxy69.findAll(Unknown Source)
+	at com.bits.assignment.universalt10.userservice.service.UserDetailServiceImpl.getAllUsers(UserDetailServiceImpl.java:35)
+	at com.bits.assignment.universalt10.userservice.controller.UserDetailController.getAllUserDetails(UserDetailController.java:40)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+[2022-05-02 18:27:50,100] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:10, serverValue:40}] to localhost:27017
+[2022-05-02 18:27:50,101] logLevel=INFO pid=4548 thread=cluster-ClusterId{value='626fd31fe308510e4fffacbd', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=714400}
+[2022-05-02 18:27:50,374] logLevel=INFO pid=4548 thread=RMI TCP Connection(19)-127.0.0.1 service=- trace= span= parent= class=o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Application shutdown requested.
+[2022-05-02 18:27:56,940] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 24168 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 18:27:56,942] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 18:27:57,352] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 18:27:57,387] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 31 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 18:27:57,675] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 18:27:57,682] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 18:27:57,683] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 18:27:57,767] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 18:27:57,767] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 796 ms
+[2022-05-02 18:27:57,870] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 18:27:57,918] logLevel=INFO pid=24168 thread=cluster-ClusterId{value='626fd555937bd111957bc229', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:42}] to localhost:27017
+[2022-05-02 18:27:57,918] logLevel=INFO pid=24168 thread=cluster-rtt-ClusterId{value='626fd555937bd111957bc229', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:43}] to localhost:27017
+[2022-05-02 18:27:57,920] logLevel=INFO pid=24168 thread=cluster-ClusterId{value='626fd555937bd111957bc229', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=13817600}
+[2022-05-02 18:27:58,560] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 18:27:58,566] logLevel=INFO pid=24168 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Started UserServiceApplication in 1.949 seconds (JVM running for 2.788)
+[2022-05-02 18:33:14,094] logLevel=INFO pid=24168 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-05-02 18:33:14,095] logLevel=INFO pid=24168 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2022-05-02 18:33:14,095] logLevel=INFO pid=24168 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Completed initialization in 0 ms
+[2022-05-02 18:33:14,212] logLevel=INFO pid=24168 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:3, serverValue:44}] to localhost:27017
+[2022-05-02 18:34:10,535] logLevel=INFO pid=24168 thread=http-nio-9002-exec-2 service=- trace= span= parent= class=o.springdoc.api.AbstractOpenApiResource Init duration for springdoc-openapi is: 197 ms
+[2022-05-02 18:38:57,562] logLevel=INFO pid=24168 thread=RMI TCP Connection(18)-127.0.0.1 service=- trace= span= parent= class=o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Application shutdown requested.
+[2022-05-02 18:39:04,589] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 12416 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 18:39:04,594] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 18:39:05,082] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 18:39:05,122] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 36 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 18:39:05,466] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 18:39:05,474] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 18:39:05,474] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 18:39:05,558] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 18:39:05,558] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 926 ms
+[2022-05-02 18:39:05,685] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 18:39:05,754] logLevel=INFO pid=12416 thread=cluster-rtt-ClusterId{value='626fd7f1d78bc84379b8be1d', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:61}] to localhost:27017
+[2022-05-02 18:39:05,754] logLevel=INFO pid=12416 thread=cluster-ClusterId{value='626fd7f1d78bc84379b8be1d', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:62}] to localhost:27017
+[2022-05-02 18:39:05,756] logLevel=INFO pid=12416 thread=cluster-ClusterId{value='626fd7f1d78bc84379b8be1d', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=20920300}
+[2022-05-02 18:39:06,643] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 18:39:06,651] logLevel=INFO pid=12416 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Started UserServiceApplication in 2.469 seconds (JVM running for 3.706)
+[2022-05-02 18:39:59,417] logLevel=INFO pid=12416 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-05-02 18:39:59,417] logLevel=INFO pid=12416 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2022-05-02 18:39:59,418] logLevel=INFO pid=12416 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Completed initialization in 1 ms
+[2022-05-02 18:40:00,173] logLevel=INFO pid=12416 thread=http-nio-9002-exec-7 service=- trace= span= parent= class=o.springdoc.api.AbstractOpenApiResource Init duration for springdoc-openapi is: 244 ms
+[2022-05-02 18:42:21,247] logLevel=INFO pid=12416 thread=RMI TCP Connection(12)-127.0.0.1 service=- trace= span= parent= class=o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin Application shutdown requested.
+[2022-05-02 18:42:27,958] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 5204 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 18:42:27,962] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 18:42:28,440] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 18:42:28,481] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 36 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 18:42:28,828] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 18:42:28,836] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 18:42:28,836] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 18:42:28,919] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 18:42:28,919] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 924 ms
+[2022-05-02 18:42:29,045] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 18:42:29,105] logLevel=INFO pid=5204 thread=cluster-rtt-ClusterId{value='626fd8bd6af5923ebecafe60', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:64}] to localhost:27017
+[2022-05-02 18:42:29,105] logLevel=INFO pid=5204 thread=cluster-ClusterId{value='626fd8bd6af5923ebecafe60', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:63}] to localhost:27017
+[2022-05-02 18:42:29,107] logLevel=INFO pid=5204 thread=cluster-ClusterId{value='626fd8bd6af5923ebecafe60', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=19603500}
+[2022-05-02 18:42:29,893] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 18:42:29,901] logLevel=INFO pid=5204 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Started UserServiceApplication in 2.322 seconds (JVM running for 3.362)
+[2022-05-02 18:42:39,683] logLevel=INFO pid=5204 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-05-02 18:42:39,684] logLevel=INFO pid=5204 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2022-05-02 18:42:39,685] logLevel=INFO pid=5204 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Completed initialization in 1 ms
+[2022-05-02 18:42:40,292] logLevel=INFO pid=5204 thread=http-nio-9002-exec-3 service=- trace= span= parent= class=o.springdoc.api.AbstractOpenApiResource Init duration for springdoc-openapi is: 247 ms
+[2022-05-02 18:44:00,411] logLevel=INFO pid=5204 thread=http-nio-9002-exec-4 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:3, serverValue:65}] to localhost:27017
+[2022-05-02 20:41:13,019] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Starting UserServiceApplication using Java 11.0.12 on BALAVIGNESH with PID 19512 (C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service\target\classes started by Vicky in C:\Storage Drive\Programming\BITS\SEM2\CPAD\Assignment2\user-service)
+[2022-05-02 20:41:13,023] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication The following 1 profile is active: "local-dev"
+[2022-05-02 20:41:13,571] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+[2022-05-02 20:41:13,614] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=o.s.d.r.c.RepositoryConfigurationDelegate Finished Spring Data repository scanning in 39 ms. Found 1 MongoDB repository interfaces.
+[2022-05-02 20:41:13,971] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat initialized with port(s): 9002 (http)
+[2022-05-02 20:41:13,979] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardService Starting service [Tomcat]
+[2022-05-02 20:41:13,979] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=org.apache.catalina.core.StandardEngine Starting Servlet engine: [Apache Tomcat/9.0.62]
+[2022-05-02 20:41:14,069] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring embedded WebApplicationContext
+[2022-05-02 20:41:14,069] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=o.s.b.w.s.c.ServletWebServerApplicationContext Root WebApplicationContext: initialization completed in 1005 ms
+[2022-05-02 20:41:14,219] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=org.mongodb.driver.cluster Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+[2022-05-02 20:41:14,288] logLevel=INFO pid=19512 thread=cluster-rtt-ClusterId{value='626ff492c4205a35a6c180ca', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:2, serverValue:69}] to localhost:27017
+[2022-05-02 20:41:14,288] logLevel=INFO pid=19512 thread=cluster-ClusterId{value='626ff492c4205a35a6c180ca', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:1, serverValue:68}] to localhost:27017
+[2022-05-02 20:41:14,292] logLevel=INFO pid=19512 thread=cluster-ClusterId{value='626ff492c4205a35a6c180ca', description='null'}-localhost:27017 service=- trace= span= parent= class=org.mongodb.driver.cluster Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=22464900}
+[2022-05-02 20:41:15,273] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=o.s.b.w.embedded.tomcat.TomcatWebServer Tomcat started on port(s): 9002 (http) with context path '/user-service'
+[2022-05-02 20:41:15,287] logLevel=INFO pid=19512 thread=main service=- trace= span= parent= class=c.b.a.u.u.UserServiceApplication Started UserServiceApplication in 2.67 seconds (JVM running for 3.745)
+[2022-05-02 20:41:26,397] logLevel=INFO pid=19512 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.a.c.c.C.[.[localhost].[/user-service] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-05-02 20:41:26,398] logLevel=INFO pid=19512 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Initializing Servlet 'dispatcherServlet'
+[2022-05-02 20:41:26,398] logLevel=INFO pid=19512 thread=http-nio-9002-exec-1 service=- trace= span= parent= class=o.s.web.servlet.DispatcherServlet Completed initialization in 0 ms
+[2022-05-02 20:41:27,161] logLevel=INFO pid=19512 thread=http-nio-9002-exec-4 service=- trace= span= parent= class=o.springdoc.api.AbstractOpenApiResource Init duration for springdoc-openapi is: 255 ms
+[2022-05-02 20:42:16,886] logLevel=INFO pid=19512 thread=http-nio-9002-exec-5 service=- trace= span= parent= class=org.mongodb.driver.connection Opened connection [connectionId{localValue:3, serverValue:70}] to localhost:27017
+[2022-05-02 20:42:49,321] logLevel=ERROR pid=19512 thread=http-nio-9002-exec-7 service=- trace= span= parent= class=o.a.c.c.C.[.[.[.[dispatcherServlet] Servlet.service() for servlet [dispatcherServlet] in context with path [/user-service] threw exception [Request processing failed; nested exception is java.lang.Exception: Incorrect Username / Password] with root cause
+java.lang.Exception: Incorrect Username / Password
+	at com.bits.assignment.universalt10.userservice.service.UserDetailServiceImpl.login(UserDetailServiceImpl.java:116)
+	at com.bits.assignment.universalt10.userservice.controller.UserDetailController.login(UserDetailController.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
