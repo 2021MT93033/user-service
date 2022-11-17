@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.bits.assignment.universalt10</groupId>
 	<artifactId>user-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>user-service</name>
 	<description>user management service for UniversalT10</description>
 	<properties>

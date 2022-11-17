@@ -3,7 +3,6 @@
  */
 package com.bits.assignment.universalt10.userservice.service;
 
-import java.io.UnsupportedEncodingException;
 import java.util.Base64;
 import java.util.List;
 import java.util.Optional;
@@ -42,9 +41,13 @@ public class UserDetailServiceImpl implements UserDetailService {
 	}
 
 	@Override
-	public UserDetail createUser(UserDetail user) throws UnsupportedEncodingException {
+	public UserDetail createUser(UserDetail user) throws Exception {
 		if (user != null) {
 			String username = user.getUserName();
+			UserDetail dbUser2 = repository.findByUserName(user.getUserName());
+			if (dbUser2 != null) {
+				throw new Exception("The UserName already exists");
+			}
 			if (StringUtils.hasText(username)) {
 				String password = Base64.getEncoder().encodeToString(user.getPassword().getBytes("utf-8"));
 				user.setPassword(password);
@@ -65,12 +68,6 @@ public class UserDetailServiceImpl implements UserDetailService {
 			return true;
 		}
 		return false;
-	}
-
-	@Override
-	public List<UserDetail> getAllAdminUsers() {
-		// TODO Auto-generated method stub
-		return repository.findByAdmin(true);
 	}
 
 	@Override

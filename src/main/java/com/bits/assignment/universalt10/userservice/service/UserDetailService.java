@@ -19,11 +19,9 @@ public interface UserDetailService {
 
 	UserDetail getUserDetailById(String id);
 
-	UserDetail createUser(UserDetail user) throws UnsupportedEncodingException;
+	UserDetail createUser(UserDetail user) throws UnsupportedEncodingException, Exception;
 
 	boolean disableUser(String id);
-
-	List<UserDetail> getAllAdminUsers();
 
 	void deleteUser(String id) throws Exception;
 

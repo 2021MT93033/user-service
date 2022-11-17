@@ -3,7 +3,6 @@
  */
 package com.bits.assignment.universalt10.userservice.controller;
 
-import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -51,18 +50,13 @@ public class UserDetailController {
 		return ResponseEntity.ok(user);
 	}
 
-	@GetMapping("/admin/users")
-	public ResponseEntity<List<UserDetail>> getAllAdminUsers() {
-		return ResponseEntity.ok(service.getAllAdminUsers());
-	}
-
 	@GetMapping("/user/disable/{id}")
 	public ResponseEntity<Boolean> disableUser(@PathVariable String id) {
 		return ResponseEntity.ok(service.disableUser(id));
 	}
 
 	@PostMapping("/user")
-	public ResponseEntity<UserDetail> createUser(@RequestBody UserDetail user) throws UnsupportedEncodingException {
+	public ResponseEntity<UserDetail> createUser(@RequestBody UserDetail user) throws Exception {
 		return ResponseEntity.ok(service.createUser(user));
 	}
 

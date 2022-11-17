@@ -14,28 +14,66 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class UserDetail extends BaseEntity {
 
+	public enum UserType {
+		DOCTOR("DOCTOR"), PATIENT("PATIENT"), NURSE("NURSE"), STAFF("STAFF"), APP_ADMIN("APP_ADMIN");
+
+		private String type;
+
+		private UserType(String type) {
+			this.type = type;
+		}
+
+		public String getType() {
+			return this.type;
+		}
+	}
+
 	private String firstName;
 	private String lastName;
 	private int age;
 	private String userName;
 	private String password;
-	boolean admin;
-	boolean blocked;
+	private boolean blocked;
+	private String hospitalName;
+	private UserType type;
+	private double height;
+	private double weight;
+	private String contactNo;
+	private String email;
 
 	public UserDetail() {
 
 	}
 
-	public UserDetail(String firstName, String lastName, int age, String userName, String password, boolean admin,
-			boolean blocked) {
+	/**
+	 * @param firstName
+	 * @param lastName
+	 * @param age
+	 * @param userName
+	 * @param password
+	 * @param blocked
+	 * @param hospitalName
+	 * @param type
+	 * @param height
+	 * @param weight
+	 * @param contactNo
+	 * @param email
+	 */
+	public UserDetail(String firstName, String lastName, int age, String userName, String password, boolean blocked,
+			String hospitalName, UserType type, double height, double weight, String contactNo, String email) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
 		this.userName = userName;
 		this.password = password;
-		this.admin = admin;
 		this.blocked = blocked;
+		this.hospitalName = hospitalName;
+		this.type = type;
+		this.height = height;
+		this.weight = weight;
+		this.contactNo = contactNo;
+		this.email = email;
 	}
 
 	/**
@@ -109,20 +147,6 @@ public class UserDetail extends BaseEntity {
 	}
 
 	/**
-	 * @return the admin
-	 */
-	public boolean isAdmin() {
-		return admin;
-	}
-
-	/**
-	 * @param admin the admin to set
-	 */
-	public void setAdmin(boolean admin) {
-		this.admin = admin;
-	}
-
-	/**
 	 * @return the blocked
 	 */
 	public boolean isBlocked() {
@@ -136,29 +160,126 @@ public class UserDetail extends BaseEntity {
 		this.blocked = blocked;
 	}
 
+	/**
+	 * @return the hospitalName
+	 */
+	public String getHospitalName() {
+		return hospitalName;
+	}
+
+	/**
+	 * @param hospitalName the hospitalName to set
+	 */
+	public void setHospitalName(String hospitalName) {
+		this.hospitalName = hospitalName;
+	}
+
+	/**
+	 * @return the type
+	 */
+	public UserType getType() {
+		return type;
+	}
+
+	/**
+	 * @param type the type to set
+	 */
+	public void setType(UserType type) {
+		this.type = type;
+	}
+
+	/**
+	 * @return the height
+	 */
+	public double getHeight() {
+		return height;
+	}
+
+	/**
+	 * @param height the height to set
+	 */
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	/**
+	 * @return the weight
+	 */
+	public double getWeight() {
+		return weight;
+	}
+
+	/**
+	 * @param weight the weight to set
+	 */
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+	/**
+	 * @return the contactNo
+	 */
+	public String getContactNo() {
+		return contactNo;
+	}
+
+	/**
+	 * @param contactNo the contactNo to set
+	 */
+	public void setContactNo(String contactNo) {
+		this.contactNo = contactNo;
+	}
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(admin, age, blocked, firstName, lastName, password, userName);
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(age, blocked, contactNo, email, firstName, height, hospitalName,
+				lastName, password, type, userName, weight);
+		return result;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj) {
 			return true;
-		if (obj == null)
+		}
+		if (!super.equals(obj)) {
 			return false;
-		if (getClass() != obj.getClass())
+		}
+		if (!(obj instanceof UserDetail)) {
 			return false;
+		}
 		UserDetail other = (UserDetail) obj;
-		return admin == other.admin && age == other.age && blocked == other.blocked
-				&& Objects.equals(firstName, other.firstName) && Objects.equals(lastName, other.lastName)
-				&& Objects.equals(password, other.password) && Objects.equals(userName, other.userName);
+		return age == other.age && blocked == other.blocked && Objects.equals(contactNo, other.contactNo)
+				&& Objects.equals(email, other.email) && Objects.equals(firstName, other.firstName)
+				&& Double.doubleToLongBits(height) == Double.doubleToLongBits(other.height)
+				&& Objects.equals(hospitalName, other.hospitalName) && Objects.equals(lastName, other.lastName)
+				&& Objects.equals(password, other.password) && type == other.type
+				&& Objects.equals(userName, other.userName)
+				&& Double.doubleToLongBits(weight) == Double.doubleToLongBits(other.weight);
 	}
 
 	@Override
 	public String toString() {
 		return "UserDetail [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", userName="
-				+ userName + ", password=" + password + ", admin=" + admin + ", blocked=" + blocked + "]";
+				+ userName + ", password=" + password + ", blocked=" + blocked + ", hospitalName=" + hospitalName
+				+ ", type=" + type + ", height=" + height + ", weight=" + weight + ", contactNo=" + contactNo
+				+ ", email=" + email + "]";
 	}
 
 }
