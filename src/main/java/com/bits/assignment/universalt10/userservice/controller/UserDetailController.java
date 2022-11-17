@@ -9,7 +9,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.ResponseEntity.HeadersBuilder;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -72,9 +71,9 @@ public class UserDetailController {
 	}
 
 	@DeleteMapping("/user/{id}")
-	public HeadersBuilder<?> deleteUser(@PathVariable String id) throws Exception {
+	public ResponseEntity<?> deleteUser(@PathVariable String id) throws Exception {
 		service.deleteUser(id);
-		return ResponseEntity.noContent();
+		return ResponseEntity.noContent().build();
 	}
 
 }
